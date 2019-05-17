@@ -1,12 +1,28 @@
+nav {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+}
+
+nav a:link, a:visited {
+  color: #FF6600;
+}
+
+nav a:hover, a:active {
+  color: #C64F00;
+}
+
 .nav-logo {
   width: 100%;
   height: auto;
+  margin-left: 0.7rem;
 }
 
 .navbar-brand {
   width: 4%;
   height: auto;
-  margin-right: 2rem;
+}
+
+.navbar {
+  padding: 0 !important;
 }
 
 header>nav>div>ul>li {

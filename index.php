@@ -23,7 +23,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md">
         <div class="navbar-collapse collapse justify-content-end w-100 order-1 order-md-0 dual-collapse2">
             <a class="navbar-brand nav-margin mr-auto" href="#"><img class="nav-logo" src="assets/img/logo.png" alt=""></a>
             <ul class="navbar-nav text-center">
@@ -39,13 +39,17 @@
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
-    <div class="banner"></div>
-    <div class="lead"></div>
+    <div class="banner">
+        <img class="banner-image" src="assets/img/placeholder-image3.png" alt="">
+    </div>
+    <div class="lead">
+        <p>asdf</p>
+    </div>
 </header>
 <div class="container-fluid">
     <section>
