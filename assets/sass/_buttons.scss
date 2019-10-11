@@ -1,0 +1,125 @@
+.buttons {
+  width: 95vw;
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.button-ragnar, .button-about, .button-community {
+  height: 18vw;
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.hover {
+  top: 0;
+  transition: top ease 0.5s;
+  position: relative;
+}
+
+.hover:hover {
+  cursor: pointer;
+  top: -5px;
+  box-shadow: 5px 5px 2.5px grey;
+}
+
+.button-about, .button-community {
+  background-color: #353a40;
+}
+
+.button-ragnar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url("../img/button-image.jpg");
+}
+
+@media all and (max-width: 768px) {
+  .buttons {
+    margin-right: auto;
+  }
+}
+
+@media all and (max-width: 1036px) {
+  .button-ragnar, .button-about, .button-community {
+    height: 22vw;
+  }
+}
+
+@media all and(max-width: 952px) {
+  .button-ragnar, .button-about, .button-community {
+    height: 24vw;
+  }
+}
+
+@media all and(max-width: 876px) {
+  .button-ragnar, .button-about, .button-community {
+    height: 26vw;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .button-ragnar, .button-about, .button-community {
+    height: 30vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .button-ragnar, .button-about, .button-community {
+    margin-bottom: 1rem;
+  }
+
+  .button-about, .button-community {
+    height: 20vw;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .button-ragnar {
+    height: 35vw;
+  }
+
+  .button-about, .button-community {
+    height: 25vw;
+  }
+}
+
+@media all and (max-width: 516px) {
+  .button-ragnar {
+    height: 40vw;
+  }
+}
+
+@media all and (max-width: 456px) {
+  .button-ragnar {
+    height: 45vw;
+  }
+
+  .button-about, .button-community {
+    height: 30vw;
+  }
+}
+
+@media all and (max-width: 411px) {
+  .button-ragnar {
+    height: 55vw;
+  }
+
+  .button-about, .button-community {
+    height: 40vw;
+  }
+}
+
+@media all and (max-width: 378px) {
+  .button-ragnar {
+    height: 70vw;
+  }
+
+  .button-about, .button-community {
+    height: 48vw;
+  }
+}
+
+@media all and (max-width: 378px) {
+  .button-ragnar {
+    height: 80vw;
+  }
+}

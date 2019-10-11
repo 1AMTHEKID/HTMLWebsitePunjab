@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.modal-head, .modal-body, .modal-content, .modal-background, .modal-footer{
+  background-color: #353a40;
+  z-index: 999;
+}
+
+.modal-cross {
+  padding-right: 0.5rem;
+  color: white;
+}
+
+.modal-head {
+  margin: 1rem;
+  text-align: center;
+}
+
+.modal-head2 {
+  margin: 0.5rem 1rem;
+  text-align: center;
+}

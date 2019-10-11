@@ -5,7 +5,40 @@
  * Date: 15-5-2019
  * Time: 11:39
  */
+
+
+//var_dump($_POST);
+
+if (isset($_POST['submit'])) {
+    require_once 'app/mailer/Mail.php';
+
+    $emailCompany = Mail::$mailCompany;
+    $subjectCompany = $_POST['firstName'] . " heeft een vraag gesteld";
+    $messageCompany = $_POST['firstName'] . ' ' . $_POST['lastName'] . ' heeft een vraag gesteld';
+    $messageCompany .= '<br><br>';
+    $messageCompany .= '<b>Bericht</b>:<br>';
+    $messageCompany .= $_POST['message'];
+    $messageCompany .= '<br><br>';
+    $messageCompany .= '<b>Gegevens</b>:<br>';
+    $messageCompany .= '<b>Naam:</b>' . $_POST['firstName'] . ' ' . $_POST['lastName'];
+    $messageCompany .= '<b>Email:</b>' . $_POST['email'];
+    Mail::send($emailCompany, $subjectCompany, $messageCompany);
+
+    $emailRecipient = $_POST['email'];
+    $subjectRecipient = "U heeft een vraag gesteld.";
+    $messageRecipient = 'Beste ' . $_POST['firstName'] . ' ' . $_POST['lastName'] . ',';
+    $messageRecipient .= '<br><br>';
+    $messageRecipient .= 'Bedankt voor uw vraag, we nemen zo snel mogelijk contact met u op!';
+    $messageRecipient .= '<br><br>';
+    $messageRecipient .= 'Met vriendelijke groet, <br>';
+    $messageRecipient .= 'Interstellar Games';
+    Mail::send($emailRecipient, $subjectRecipient, $messageRecipient);
+
+
+}
 ?>
+
+<!-- Modal boxes gebruiken-->
 
 <!doctype html>
 <html lang="en">
@@ -17,64 +50,32 @@
     <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <title>Interstellar</title>
-
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-md">
-        <div class="navbar-collapse collapse justify-content-end w-100 order-1 order-md-0 dual-collapse2">
-            <a class="navbar-brand nav-margin mr-auto" href="#"><img class="nav-logo" src="assets/img/logo.png" alt=""></a>
-            <ul class="navbar-nav text-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#button-ragnar"><h5>RAGNAR</h5></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#button-about"><h5>ABOUT</h5></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#button-contact"><h5>CONTACT</h5></a>
-                </li>
-            </ul>
-        </div>
-        <div class="mx-auto order-0">
-            <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-    <div class="banner">
-        <img class="banner-image" src="assets/img/placeholder-image3.png" alt="">
+<div class="wrapper">
+    <?php
+    include_once("sub-pages/header.php");
+    ?>
+    <div class="container-fluid">
+        <section>
+            <?php
+            include_once("sub-pages/buttons.php")
+            ?>
+        </section>
+        <section>
+            <?php
+            include_once("sub-pages/articles.php");
+            ?>
+        </section>
     </div>
-    <div class="lead">
-        <p>asdf</p>
-    </div>
-</header>
-<div class="container-fluid">
-    <section>
-        <div class="row">
-            <div class="col-md-6"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-        </div>
-    </section>
-    <section>
-        <div class="row">
-            <div id="button-ragnar" class="col-md-4"></div>
-            <div id="button-about" class="col-md-4"></div>
-            <div id="button-contact" class="col-md-4"></div>
-        </div>
-    </section>
+    <?php
+    include_once("sub-pages/footer.php");
+    ?>
 </div>
-<footer>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-    </div>
-</footer>
-
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 </body>

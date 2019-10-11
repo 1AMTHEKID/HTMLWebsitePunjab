@@ -3,6 +3,32 @@
   src: url("../fonts/Infinium-Guardian.ttf");
 }
 
-nav {
+@font-face {
+  font-family: Winter;
+  src: url("../fonts/wintersolstice.ttf");
+}
+
+.fab {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.discord {
+  margin-top: 0.09rem;
+}
+
+.font-float {
+  float: left;
+}
+
+.font-guardian {
   font-family: Guardian;
+}
+
+.font-winter {
+  font-family: Winter;
+}
+
+.interstellar-orange {
+  color: #FF6600;
 }

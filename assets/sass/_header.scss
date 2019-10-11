@@ -1,5 +1,5 @@
 .banner-image {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
@@ -9,4 +9,10 @@
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media all and (max-width: 437px) {
+  .banner-image {
+    height: 25vw;
+  }
 }

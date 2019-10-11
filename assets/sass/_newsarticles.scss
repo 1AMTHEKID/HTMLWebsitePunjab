@@ -1,0 +1,26 @@
+.articles {
+  width: 95vw;
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.news-article {
+  background-color: #353a40;
+  border-radius: 5px;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  .articles {
+    margin-right: auto;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .news-articles {
+    margin-right: 1.5rem;
+  }
+}
